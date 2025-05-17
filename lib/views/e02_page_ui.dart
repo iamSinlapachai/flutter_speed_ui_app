@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_speed_ui_app/views/e03_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/e04_page_ui.dart';
 
 class E02PageUI extends StatefulWidget {
   const E02PageUI({super.key});
@@ -16,10 +17,43 @@ class _E02PageUIState extends State<E02PageUI> {
       body: Center(
         child: Column(
           children: [
-            Image.asset(
-              'assets/images/imge2.png',
-              fit: BoxFit.cover,
-              width: double.infinity,
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/imge2.png',
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                  top: 40,
+                  left: 25,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white
+                            .withOpacity(0.8), // สีพื้นหลัง (ปรับได้)
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 4,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Colors.black,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 10,
@@ -91,13 +125,20 @@ class _E02PageUIState extends State<E02PageUI> {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => E04PageUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Forget Password?",
                     style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue),
+                        color: const Color(0xFFF79515)),
                   ),
                 ),
               ),
@@ -197,7 +238,14 @@ class _E02PageUIState extends State<E02PageUI> {
                 'Don\'t have an account? ',
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => E03PageUI(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Create Account',
                   style: TextStyle(

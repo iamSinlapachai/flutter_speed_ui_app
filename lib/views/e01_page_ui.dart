@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/e02_page_ui.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class E01PageUI extends StatelessWidget {
@@ -32,7 +33,14 @@ class E01PageUI extends StatelessWidget {
               height: 50,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => E02PageUI(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFFF69515),
                 fixedSize: Size(

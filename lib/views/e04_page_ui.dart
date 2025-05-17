@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_speed_ui_app/views/e03_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/e05_page_ui.dart';
 
 class E04PageUI extends StatefulWidget {
   const E04PageUI({super.key});
@@ -16,40 +17,43 @@ class _E04PageUIState extends State<E04PageUI> {
       body: Center(
         child: Column(
           children: [
-            Image.asset(
-              'assets/images/imge2.png',
-              fit: BoxFit.cover,
-              width: double.infinity,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 40, right: 40),
-              child: Column(
-                children: [
-                  const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Forgot your Password?",
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w900,
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/imge2.png',
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Positioned(
+                  top: 40,
+                  left: 25,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      padding: EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white
+                            .withOpacity(0.8), // สีพื้นหลัง (ปรับได้)
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black12,
+                            blurRadius: 4,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Colors.black,
+                        size: 20,
                       ),
                     ),
                   ),
-                  const Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Enter email address',
-                      style: TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
             SizedBox(
               height: 10,
@@ -79,7 +83,14 @@ class _E04PageUIState extends State<E04PageUI> {
                 bottom: 20,
               ),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => E05PageUI(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.orange,
                   fixedSize: Size(
@@ -108,7 +119,14 @@ class _E04PageUIState extends State<E04PageUI> {
                 'Don\'t have an account? ',
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => E03PageUI(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Create  Account',
                   style: TextStyle(
