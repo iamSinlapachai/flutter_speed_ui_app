@@ -138,6 +138,8 @@ class _E02PageUIState extends State<E02PageUI> {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            SizedBox(height: 10),
+            // Social Login
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -145,48 +147,44 @@ class _E02PageUIState extends State<E02PageUI> {
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    fixedSize: Size(
-                      50,
-                      50,
-                    ),
+                    fixedSize: Size(50, 50),
+                    shape: CircleBorder(),
+                    elevation: 2,
+                    padding: EdgeInsets.all(10), // ปรับ padding ให้ภาพไม่แนบขอบ
                   ),
-                  child: Icon(
-                    FontAwesomeIcons.google,
-                    color: Colors.black,
+                  child: Image.asset(
+                    'assets/images/imge3.png',
+                    fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+                SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    fixedSize: Size(
-                      50,
-                      50,
-                    ),
+                    fixedSize: Size(50, 50),
+                    shape: CircleBorder(),
+                    elevation: 2,
+                    padding: EdgeInsets.all(10),
                   ),
-                  child: Icon(
-                    FontAwesomeIcons.facebook,
-                    color: Colors.black,
+                  child: Image.asset(
+                    'assets/images/imge4.png',
+                    fit: BoxFit.contain,
                   ),
                 ),
-                SizedBox(
-                  width: 10,
-                ),
+                SizedBox(width: 10),
                 ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
-                    fixedSize: Size(
-                      50,
-                      50,
-                    ),
+                    fixedSize: Size(50, 50),
+                    shape: CircleBorder(),
+                    elevation: 2,
+                    padding: EdgeInsets.all(10),
                   ),
-                  child: Icon(
-                    FontAwesomeIcons.apple,
-                    color: Colors.black,
+                  child: Image.asset(
+                    'assets/images/imge5.png',
+                    fit: BoxFit.contain,
                   ),
                 ),
               ],
