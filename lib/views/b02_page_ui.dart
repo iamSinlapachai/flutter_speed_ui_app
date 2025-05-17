@@ -22,9 +22,10 @@ class _B02PageUIState extends State<B02PageUI> {
             Text(
               "Login here",
               style: TextStyle(
-                  fontSize: 35,
-                  fontWeight: FontWeight.w900,
-                  color: const Color(0xFF1F41BB)),
+                fontSize: 35,
+                fontWeight: FontWeight.w900,
+                color: const Color(0xFF1F41BB),
+              ),
             ),
             SizedBox(
               height: 20,
