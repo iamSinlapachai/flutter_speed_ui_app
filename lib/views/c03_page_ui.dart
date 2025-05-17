@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/a02_page_ui.dart';
 import 'package:flutter_speed_ui_app/views/c02_page_ui.dart';
 
 class C03PageUI extends StatefulWidget {
@@ -288,7 +289,7 @@ class _C03PageUIState extends State<C03PageUI> {
                   ),
                 ),
                 child: Text(
-                  'SIGN IN',
+                  'SIGN UP',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -397,7 +398,7 @@ class _C03PageUIState extends State<C03PageUI> {
                       );
                     },
                     child: Text(
-                      'SIGN UP',
+                      'SIGN IN',
                       style: TextStyle(
                         color: Color(0xFF00B140),
                         fontSize: 16,
