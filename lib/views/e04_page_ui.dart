@@ -110,7 +110,7 @@ class _E04PageUIState extends State<E04PageUI> {
               InkWell(
                 onTap: () {},
                 child: Text(
-                  'Create Account',
+                  'Create  Account',
                   style: TextStyle(
                     color: Colors.orange,
                   ),
