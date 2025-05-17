@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/b02_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
 
 class B01PageUI extends StatelessWidget {
   const B01PageUI({super.key});
@@ -62,7 +64,14 @@ class B01PageUI extends StatelessWidget {
               children: [
                 // Sign in button (Blue)
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => B02PageUI(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF1F41BB), // Blue background
                     fixedSize: Size(140, 40),
@@ -71,7 +80,7 @@ class B01PageUI extends StatelessWidget {
                     ),
                   ),
                   child: const Text(
-                    'Sign in',
+                    'Login',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -83,7 +92,14 @@ class B01PageUI extends StatelessWidget {
                 const SizedBox(width: 15), // Space between buttons
                 // Register button (Gray)
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => B03PageUI(),
+                      ),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.grey.shade300, // Gray background
                     fixedSize: Size(140, 40),
