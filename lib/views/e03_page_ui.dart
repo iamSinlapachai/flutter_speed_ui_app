@@ -8,7 +8,7 @@ class E03PageUI extends StatefulWidget {
 }
 
 class _E03PageUIState extends State<E03PageUI> {
-  final _formKey = GlobalKey<FormState>();
+  //final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _E03PageUIState extends State<E03PageUI> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Form(
-                  key: _formKey,
+                  //key: _formKey,
                   child: Column(
                     children: [
                       _buildTextFormField('Name', 'Input Name'),
