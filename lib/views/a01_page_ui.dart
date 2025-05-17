@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_speed_ui_app/views/a02_page_ui.dart';
 
 class A01PageUI extends StatelessWidget {
   const A01PageUI({super.key});
@@ -111,7 +112,12 @@ class A01PageUI extends StatelessWidget {
                   Expanded(
                     child: GestureDetector(
                       onTap: () {
-                        // Handle register
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => A02PageUI(),
+                          ),
+                        );
                       },
                       child: Container(
                         decoration: const BoxDecoration(
