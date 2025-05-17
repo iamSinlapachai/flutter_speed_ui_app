@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_ui_app/views/E02_page_ui.dart';
+import 'package:flutter_speed_ui_app/views/e03_page_ui.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 
@@ -23,7 +24,7 @@ class _FlutterSpeedUIProjectState extends State<FlutterSpeedUIProject> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: E02PageUI(),
+      home: E03PageUI(),
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,
